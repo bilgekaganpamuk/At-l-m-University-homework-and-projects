@@ -4,6 +4,7 @@ struct Node{
 int info;
 Node *link;
 };
+
 Node* createForward(){
 Node *head, *last, *current;
 int num;
@@ -16,7 +17,8 @@ current->info=num;
 current->link=NULL;
 if(head==NULL){//empty list?
 head=current;
-last=current;}
+last=current;
+}
 else{
 last->link=current;
 last=current;}
@@ -26,7 +28,7 @@ return head;
 }
 int main(){
 Node *h,*t,*p;
-char c;
+int c;
 //Create List
 h=createForward();
 t=h;
@@ -45,7 +47,7 @@ p=p->link;
 if(p!=NULL)
 {
 cout<<c<<" is found at node "<<endl;
-p->info='a';
+p->info='c';
 }
 else
 cout<<c<<" was not found."<<endl;
